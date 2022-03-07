@@ -11,9 +11,36 @@
   padding: 0;
   margin: 0;
 }
+header{
+  background: #fff;
+}
+header::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+.logo{
+  float: left;
+  padding: 10px;
+}
+nav{
+  float: right;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li{
+  display: inline-block;
+  margin-left: 70px;
+  padding: 20px 0;
+}
 body {
   background-size: cover;
-  background-image: url('assets/pic.jpg');
+  background-image: url('../assets/pic.jpg');
   background-repeat: no-repeat;
   background-color: #cccccc;
   height: 500px;
