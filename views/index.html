@@ -11,21 +11,64 @@
 
 <body>
 <header>
-    <div>
-        <img src="../assets/sbu-logo.png" alt="logo" class="logo" height="30">
+    <div class="navbar">
+        <img  class="logo" src="../assets/sbu-logo.png" alt="logo" height="60">
         <nav>
-            <ul>
+            <ul class="nav__links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Faculties</a></li>
-                <li><a href="#">Sign in</a></li>
             </ul>
         </nav>
+        <a class="cta" href="#"><button>Sign in</button></a>
     </div>
 </header>
-<div class="navbar"></div>
+
 <div class="drop-down"></div>
-<div class="main-body"></div>
+<div class="main-body">
+    <div class="first_container">
+        <div class ="contact_us">
+            <a class="contact_us_title"> Contact Us</a>
+            <div class="row">
+                <div class="row_circle"><img  class="icons" src="../assets/location-logo.png" alt="icon" height="18"></div>
+                <div class="row_content">
+                    <p>Shahid Beheshti University, Shahid Shariati Square, Evin, Tehran, Iran</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row_circle"><img  class="icons" src="../assets/email-logo.png" alt="icon" height="18"></div>
+                <div class="row_content">
+                    <p>int.education@sbu.ac.ir</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row_circle"><img  class="icons" src="../assets/phone-logo.png" alt="icon" height="18"></div>
+                <div class="row_content">
+                    <p>(+98 21) 29902761</p>
+                    <p> (+98 21) 22431585</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second_container">
+        <ul class="column">
+            <img  class="send" src="../assets/send.png" alt="send" height="30">
+            <div>
+                <input type="text" id="Name" class="name__input" autofocus placeholder="Name">
+            </div>
+            <div>
+                <input type="text" id="Phone" class="phone__input" autofocus placeholder="Phone number">
+
+            </div>
+            <div>
+                <input type="text" id="Text" class="text__input" autofocus placeholder="Some Text">
+            </div>
+            <div>
+                <a class="submit" href="#"><button>Submit</button></a>
+            </div>
+        </ul>
+    </div>
+</div>
 </body>
 
 </html>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
 :root {
   --white: white;
   --blue: rgb(67, 140, 223);
@@ -6,38 +8,97 @@
   --grey: rgb(63, 63, 63);
   --orange: #ff8800;
 }
-* {
+
+*{
+  box-sizing: border-box;
   font-family: sans-serif;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  background: transparent;
 }
+
+li, a, button{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font_size: 16px;
+  color: #000;
+  text-decoration: none;
+  background-color: transparent;
+}
+
 header{
-  background: #fff;
-}
-header::after{
-  content: '';
-  display: table;
-  clear: both;
-}
-.logo{
-  float: left;
-  padding: 10px;
-}
-nav{
-  float: right;
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: transparent;
+
 }
 
-nav ul{
+.navbar {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: white;
   margin: 0;
-  padding: 0;
-  list-style: none;
+  padding: 10px 10px;
 }
 
-nav li{
-  display: inline-block;
-  margin-left: 70px;
-  padding: 20px 0;
+.logo{
+  cursor: pointer;
+  order: 1;
+  margin-right: auto;
 }
+
+.nav__links{
+  list-style: none;
+
+}
+
+.nav__links li{
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav__links li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+  text-decoration: underline;
+  text-decoration-width: 20px;
+  text-underline-offset: 15px;
+  text-decoration-color: #f1b717;
+  color: rgb(63, 63, 63);
+}
+
+button{
+  /*margin-right: 100px;*/
+  padding: 9px 25px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgb(63, 63, 63);
+}
+
+nav{
+order: 2;
+  justify-content: center;
+}
+
+.cta{
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  text-decoration-color: white;
+  order:3;
+}
+
 body {
   background-size: cover;
   background-image: url('../assets/pic.jpg');
@@ -47,8 +108,7 @@ body {
   background-position: center;
 }
 
-.navbar { 
-}
+
 .drop-down {
   
 }
@@ -66,7 +126,6 @@ body {
 .navbar-items {
   
 }
-
 .navbar img {
   
 }
@@ -93,11 +152,107 @@ body {
   
 }
 .main-body {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+.first_container{
+  display: flex;
+  border-radius: 15px;
+  padding: 20px 20px;
+  margin: 10px 10px;
+  backdrop-filter: blur(5px);
+}
+.second_container{
+  display: flex;
+  border-radius: 15px;
+  padding: 20px 20px;
+  margin: 10px 10px;
+  backdrop-filter: blur(5px);
+}
+.contact_us{
+  list-style: none;
+  align-items: stretch;
+}
+.contact_us_title{
+  font-weight: 1000;
+  font-size: 22px;
+}
+.row_circle{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: black;
+}
+.icons{
+  filter: invert(1);
 }
 
-.data {
-  
+.send{
+  padding-left: 180px;
+  cursor: pointer;
+  margin-left: auto;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: black;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+.name__input{
+  margin: 5px;
+  padding: 5px;
+  height: 30px;
+  border-radius: 15px;
+  color: black;
+  text-decoration-color: black;
+  border-color: black;
+  border-image-width: 5px;
+}
+
+.phone__input{
+  margin: 5px;
+  padding: 5px;
+  height: 30px;
+  border-radius: 15px;
+  color: black;
+  text-decoration-color: black;
+  border-color: black;
+  border-image-width: 5px;
+}
+
+.text__input{
+  margin: 5px;
+  padding: 5px;
+  height: 80px;
+  border-radius: 15px;
+  color: black;
+  text-decoration-color: black;
+  border-color: black;
+  border-image-width: 5px;
+}
+
+.submit{
+  height: 40px;
+  background-color: darkorange;
+  color: black;
+}
+
+.data {}
 
 
 input[type="text"] {
@@ -122,3 +277,38 @@ textarea:focus {
 }
 
 
+.row{
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px 10px;
+}
+.row .row_content{
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.row p{
+  margin: 0;
+  line-height: 1.2;
+}
+
+.row .notification-actions{
+  opacity: 0;
+  transition: ease 0.3s;
+}
+.row:hover{
+  opacity: 1;
+}
+
+input[type=text]:focus {
+  width: max-content;
+}
+
+input[type=text]{
+  width: 100px;
+}
+
+.column{
+  flex-grow: 1;
+}
